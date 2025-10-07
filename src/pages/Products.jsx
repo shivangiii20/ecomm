@@ -13,15 +13,11 @@ import {
   Divider,
   FormGroup,
 } from "@mui/material";
-
-const productsData = [
-  { id: 1, name: "Single Leather Chair", price: 250, category: "Men", brand: "Samsung", availability: "In Stock", image: "/images/chair.jpg" },
-  { id: 2, name: "Wireless Headphone", price: 150, category: "Electronics", brand: "Apple", availability: "Out of Stock", image: "/images/headphone.jpg" },
-  { id: 3, name: "Smartwatch", price: 300, category: "Women", brand: "Apple", availability: "In Stock", image: "/images/watch.jpg" },
-  { id: 4, name: "Laptop", price: 800, category: "Electronics", brand: "Samsung", availability: "In Stock", image: "/images/laptop.jpg" },
-  { id: 5, name: "Digital Camera", price: 600, category: "Electronics", brand: "Apple", availability: "In Stock", image: "/images/camera.jpg" },
-  { id: 6, name: "Jacket", price: 120, category: "Women", brand: "Samsung", availability: "Out of Stock", image: "/images/jacket.jpg" },
-];
+import mens from "../data/mens";
+import womens from "../data/womens";
+import electronics from "../data/electronics";
+import furniture from "../data/furniture";
+import mobiles from "../data/mobiles";
 
 const Products = () => {
   const [selectedCategory, setSelectedCategory] = useState("");
@@ -39,25 +35,62 @@ const Products = () => {
     setAvailability((prev) => (prev === value ? "" : value));
   };
 
-  const filteredProducts = productsData.filter((product) => {
-    const matchCategory = selectedCategory ? product.category === selectedCategory : true;
-    const matchPrice = product.price >= priceRange[0] && product.price <= priceRange[1];
-    const matchBrand = selectedBrand ? product.brand === selectedBrand : true;
-    const matchAvailability = availability ? product.availability === availability : true;
-    return matchCategory && matchPrice && matchBrand && matchAvailability;
-  });
+  // Map category names to imported files
+  const categoryMap = {
+    Men: mens,
+    Women: womens,
+    Electronics: electronics,
+    Furniture: furniture,
+    Mobiles: mobiles,
+  };
+
+  // Get products in selected category & price range
+  const getProductsByCategoryAndRange = () => {
+    if (!selectedCategory) {
+      // Combine all categories if none selected
+      let allProducts = [];
+      Object.values(categoryMap).forEach((cat) => {
+        Object.values(cat).forEach((slot) => allProducts.push(...slot));
+      });
+      return allProducts;
+    }
+
+    const categoryData = categoryMap[selectedCategory];
+    if (!categoryData) return [];
+
+    let productsInRange = [];
+    Object.entries(categoryData).forEach(([rangeKey, products]) => {
+      const [min, max] = rangeKey.split("-").map(Number);
+      // Include slot if it overlaps with slider range
+      if (priceRange[1] >= min && priceRange[0] <= max) {
+        productsInRange.push(...products);
+      }
+    });
+
+    return productsInRange;
+  };
+
+  const filteredProducts = getProductsByCategoryAndRange().filter(
+    (product) => {
+      const matchBrand = selectedBrand ? product.brand === selectedBrand : true;
+      const matchAvailability = availability
+        ? product.availability === availability
+        : true;
+      const matchPrice =
+        product.price >= priceRange[0] && product.price <= priceRange[1];
+      return matchBrand && matchAvailability && matchPrice;
+    }
+  );
 
   return (
-    // Page wrapper: column flex with minHeight so the footer sits after this component
     <Box sx={{ display: "flex", flexDirection: "column", minHeight: "100vh", bgcolor: "#fff" }}>
-      {/* Main two-column row that stretches both columns equally */}
       <Box
         component="main"
         sx={{
           display: "flex",
-          flex: 1,              // take remaining height so footer is pushed below
+          flex: 1,
           flexDirection: "row",
-          alignItems: "stretch" // equal height columns
+          alignItems: "stretch",
         }}
       >
         {/* Sidebar */}
@@ -83,7 +116,7 @@ const Products = () => {
             Category
           </Typography>
           <FormGroup>
-            {["Mobiles", "Men", "Women", "Electronics"].map((cat) => (
+            {["Mobiles", "Men", "Women", "Electronics", "Furniture"].map((cat) => (
               <FormControlLabel
                 key={cat}
                 control={
@@ -118,7 +151,7 @@ const Products = () => {
             Brand
           </Typography>
           <FormGroup>
-            {["Samsung", "Apple"].map((brand) => (
+            {["Samsung", "Apple",].map((brand) => (
               <FormControlLabel
                 key={brand}
                 control={
@@ -188,8 +221,8 @@ const Products = () => {
                     />
                     <CardContent>
                       <Typography variant="h6">{product.name}</Typography>
-                      <Typography variant="body2" color="text.secondary" mb={1}>
-                        Short description
+                      <Typography variant="body2" color="text.secondary">
+                        Rating: {product.rating} ⭐
                       </Typography>
                       <Typography variant="h6">${product.price}</Typography>
                       <Button variant="contained" color="primary" fullWidth sx={{ mt: 1 }}>
@@ -207,7 +240,6 @@ const Products = () => {
           </Grid>
         </Box>
       </Box>
-      {/* Footer should be rendered by the page/layout after this component */}
     </Box>
   );
 };

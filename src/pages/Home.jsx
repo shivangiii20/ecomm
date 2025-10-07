@@ -182,7 +182,7 @@ function Home() {
         }}
       >
         <WeekendIcon sx={{ fontSize: { xs: 36, sm: 44, md: 56, lg: 64 }, color: "primary.main" }} />
-        <Typography>Home</Typography>
+        <Typography>Furniture</Typography>
       </Paper>
     </Grid>
 
