@@ -7,7 +7,7 @@ const Mobiles = {
       rating: 3.8,
       brand: "Nokia",
       availability: "In Stock",
-      image: "/images/mobiles/nokia.jpg",
+      images: ["/images/mobiles/nokia.jpg", "/images/mobiles/nokia2.jpg"],
     },
     {
       id: "mob-2",
@@ -16,9 +16,8 @@ const Mobiles = {
       rating: 3.5,
       brand: "Micromax",
       availability: "Out of Stock",
-      image: "/images/mobiles/miniphone.jpg",
+      images: ["/images/mobiles/miniphone.jpg", "/images/mobiles/miniphone2.jpg"],
     },
-
     {
       id: "mob-3",
       name: "Compact smart Phone",
@@ -26,7 +25,7 @@ const Mobiles = {
       rating: 3.5,
       brand: "Micromax",
       availability: "Out of Stock",
-      image: "/images/mobiles/smartphone.jpg",
+      images: ["/images/mobiles/smartphone.jpg", "/images/mobiles/smartphone2.jpg"],
     },
   ],
 
@@ -38,7 +37,7 @@ const Mobiles = {
       rating: 4.0,
       brand: "Samsung",
       availability: "In Stock",
-      image: "/images/mobiles/smartlite.jpg",
+      images: ["/images/mobiles/smartlite.jpg", "/images/mobiles/smartlite2.jpg"],
     },
     {
       id: "mob-5",
@@ -47,7 +46,7 @@ const Mobiles = {
       rating: 3.9,
       brand: "Realme",
       availability: "In Stock",
-      image: "/images/mobiles/pocket.jpg",
+      images: ["/images/mobiles/pocket.jpg", "/images/mobiles/pocket2.jpg"],
     },
   ],
 
@@ -59,7 +58,7 @@ const Mobiles = {
       rating: 4.2,
       brand: "Xiaomi",
       availability: "In Stock",
-      image: "/images/mobiles/redmi.jpg",
+      images: ["/images/mobiles/redmi.jpg", "/images/mobiles/redmi2.jpg"],
     },
     {
       id: "mob-7",
@@ -68,7 +67,7 @@ const Mobiles = {
       rating: 4.1,
       brand: "Samsung",
       availability: "Out of Stock",
-      image: "/images/mobiles/samsung.jpg",
+      images: ["/images/mobiles/samsung.jpg", "/images/mobiles/samsung2.jpg"],
     },
     {
       id: "mob-8",
@@ -77,7 +76,7 @@ const Mobiles = {
       rating: 4.1,
       brand: "apple",
       availability: "Out of Stock",
-      image: "/images/mobiles/iphone16.jpg",
+      images: ["/images/mobiles/iphone16.jpg", "/images/mobiles/iphone16-2.jpg"],
     },
   ],
 
@@ -89,7 +88,7 @@ const Mobiles = {
       rating: 4.4,
       brand: "Motorola",
       availability: "In Stock",
-      image: "/images/mobiles/motorola.jpg",
+      images: ["/images/mobiles/motorola.jpg", "/images/mobiles/motorola2.jpg"],
     },
     {
       id: "mob-10",
@@ -98,7 +97,7 @@ const Mobiles = {
       rating: 4.2,
       brand: "apple",
       availability: "In Stock",
-      image: "/images/mobiles/iphone14.jpg",
+      images: ["/images/mobiles/iphone14.jpg", "/images/mobiles/iphone14-2.jpg"],
     },
   ],
 
@@ -110,7 +109,7 @@ const Mobiles = {
       rating: 4.3,
       brand: "Vivo",
       availability: "In Stock",
-      image: "/images/mobiles/vivo.jpg",
+      images: ["/images/mobiles/vivo.jpg", "/images/mobiles/vivo2.jpg"],
     },
     {
       id: "mob-12",
@@ -119,7 +118,7 @@ const Mobiles = {
       rating: 4.5,
       brand: "samsung",
       availability: "Out of Stock",
-      image: "/images/mobiles/zfold.jpg",
+      images: ["/images/mobiles/zfold.jpg", "/images/mobiles/zfold2.jpg"],
     },
   ],
 
@@ -131,7 +130,7 @@ const Mobiles = {
       rating: 4.6,
       brand: "Samsung",
       availability: "In Stock",
-      image: "/images/mobiles/galaxy.jpg",
+      images: ["/images/mobiles/galaxy.jpg", "/images/mobiles/galaxy2.jpg"],
     },
     {
       id: "mob-14",
@@ -140,7 +139,7 @@ const Mobiles = {
       rating: 4.7,
       brand: "apple",
       availability: "In Stock",
-      image: "/images/mobiles/iphone16.jpg",
+      images: ["/images/mobiles/iphone16.jpg", "/images/mobiles/iphone16-2.jpg"],
     },
   ],
 
@@ -152,7 +151,7 @@ const Mobiles = {
       rating: 4.8,
       brand: "samsung",
       availability: "In Stock",
-      image: "/images/mobiles/zflip.jpg",
+      images: ["/images/mobiles/zflip.jpg", "/images/mobiles/zflip2.jpg"],
     },
     {
       id: "mob-16",
@@ -161,7 +160,7 @@ const Mobiles = {
       rating: 4.7,
       brand: "Realme",
       availability: "Out of Stock",
-      image: "/images/mobiles/realme.jpg",
+      images: ["/images/mobiles/realme.jpg", "/images/mobiles/realme2.jpg"],
     },
   ],
 
@@ -173,7 +172,7 @@ const Mobiles = {
       rating: 4.8,
       brand: "Apple",
       availability: "In Stock",
-      image: "/images/mobiles/iphone17.jpg",
+      images: ["/images/mobiles/iphone17.jpg", "/images/mobiles/iphone17-2.jpg"],
     },
     {
       id: "mob-18",
@@ -182,7 +181,7 @@ const Mobiles = {
       rating: 4.7,
       brand: "Apple",
       availability: "In Stock",
-      image: "/images/mobiles/ipad.jpg",
+      images: ["/images/mobiles/ipad.jpg", "/images/mobiles/ipad2.jpg"],
     },
   ],
 
@@ -194,7 +193,7 @@ const Mobiles = {
       rating: 4.9,
       brand: "Samsung",
       availability: "In Stock",
-      image: "/images/mobiles/s22.jpg",
+      images: ["/images/mobiles/s22.jpg", "/images/mobiles/s22-2.jpg"],
     },
     {
       id: "mob-20",
@@ -203,7 +202,7 @@ const Mobiles = {
       rating: 4.8,
       brand: "OnePlus",
       availability: "Out of Stock",
-      image: "/images/mobiles/oneplus.jpg",
+      images: ["/images/mobiles/oneplus.jpg", "/images/mobiles/oneplus2.jpg"],
     },
   ],
 
@@ -215,7 +214,7 @@ const Mobiles = {
       rating: 5.0,
       brand: "Apple",
       availability: "In Stock",
-      image: "/images/mobiles/iphone15.jpg",
+      images: ["/images/mobiles/iphone15.jpg", "/images/mobiles/iphone15-2.jpg"],
     },
     {
       id: "mob-22",
@@ -224,7 +223,7 @@ const Mobiles = {
       rating: 4.9,
       brand: "Samsung",
       availability: "In Stock",
-      image: "/images/mobiles/fold.jpg",
+      images: ["/images/mobiles/fold.jpg", "/images/mobiles/fold2.jpg"],
     },
   ],
 };

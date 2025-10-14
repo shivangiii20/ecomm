@@ -43,7 +43,7 @@ function Navbar() {
             variant="h6"
             component={Link}
             to="/"
-            sx={{ textDecoration: "none", color: "inherit", fontWeight: "bold" }}
+            sx={{ textDecoration: "none", color: "inherit", fontWeight: "bold", fontFamily: "FiraSans", }}
           >
             YourStore
           </Typography>
@@ -55,7 +55,13 @@ function Navbar() {
                 key={item.text}
                 component={Link}
                 to={item.path}
-                sx={{ color: "#000", textTransform: "none" }}
+                sx={{ color: "#000", textTransform: "none", fontFamily: "FiraSans", fontWeight: "bold", fontSize: {
+          xs: "1.1rem",  // extra small screens
+          sm: "1.2rem",  // small screens
+          md: "1.5rem",    // medium screens
+          lg: "1.7rem",  // large screens
+          xl: "1.9rem",  // extra large screens
+        },   marginLeft: { md: "8px", lg: "12px" },}}
               >
                 {item.text}
               </Button>
@@ -68,7 +74,12 @@ function Navbar() {
               component={Link}
               to="/login"
               variant="contained"
-              sx={{ backgroundColor: "#000", textTransform: "none" }}
+              sx={{ backgroundColor: "#3f8df2ff", textTransform: "none", fontFamily: "FiraSans", fontWeight: "bold", fontSize: {
+              xs: "0.85rem",
+              sm: "1.1rem",
+              md: "1.2rem",
+              lg: "1.2rem",
+            }, }}
             >
               Login
             </Button>

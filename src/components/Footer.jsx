@@ -11,10 +11,11 @@ const Footer = () => {
     <Box
       component="footer"
       sx={{
-        backgroundColor: "#bcd0eefc",
-        color: "#fff",
+        backgroundColor: "#f8f9fa",
+        color: "black",
         py: 5,
         mt: 5,
+        
       }}
     >
       <Container maxWidth="lg">
@@ -29,7 +30,14 @@ const Footer = () => {
                 underline="hover"
                 sx={{
                   transition: "color 0.3s",
-                  "&:hover": { color: "#00bcd4" }, // Hover color
+                  "&:hover": { color: "#00bcd4" },
+                  fontFamily: "FiraSans", 
+                  fontWeight: "bold", 
+                  fontSize: {
+          xs: "1.1rem", 
+          sm: "1.1rem",  
+          md: "1.3rem",    
+          lg: "1.4rem",  },
                 }}
               >
                 About Us
@@ -42,6 +50,13 @@ const Footer = () => {
                 sx={{
                   transition: "color 0.3s",
                   "&:hover": { color: "#00bcd4" },
+                  fontFamily: "FiraSans", 
+                  fontWeight: "bold", 
+                  fontSize: {
+          xs: "1.1rem", 
+          sm: "1.1rem",  
+          md: "1.3rem",    
+          lg: "1.4rem",  },
                 }}
               >
                 Contact Us
@@ -54,6 +69,13 @@ const Footer = () => {
                 sx={{
                   transition: "color 0.3s",
                   "&:hover": { color: "#00bcd4" },
+                  fontFamily: "FiraSans", 
+                  fontWeight: "bold", 
+                  fontSize: {
+          xs: "1.1rem", 
+          sm: "1.1rem",  
+          md: "1.3rem",    
+          lg: "1.4rem",  },
                 }}
               >
                 Privacy Policy
@@ -66,6 +88,13 @@ const Footer = () => {
                 sx={{
                   transition: "color 0.3s",
                   "&:hover": { color: "#00bcd4" },
+                  fontFamily: "FiraSans", 
+                  fontWeight: "bold", 
+                  fontSize: {
+          xs: "1.1rem", 
+          sm: "1.1rem",  
+          md: "1.3rem",    
+          lg: "1.4rem",  },
                 }}
               >
                 Terms & Conditions
@@ -82,7 +111,7 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 sx={{
-                  color: "#fff",
+                  color: "#000000ff",
                   transition: "color 0.3s, transform 0.3s",
                   "&:hover": { color: "#3b5998", transform: "scale(1.2)" },
                 }}
@@ -95,7 +124,7 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 sx={{
-                  color: "#fff",
+                  color: "#000000ff",
                   transition: "color 0.3s, transform 0.3s",
                   "&:hover": { color: "#E1306C", transform: "scale(1.2)" },
                 }}
@@ -108,7 +137,7 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 sx={{
-                  color: "#fff",
+                  color: "#000000ff",
                   transition: "color 0.3s, transform 0.3s",
                   "&:hover": { color: "#1DA1F2", transform: "scale(1.2)" },
                 }}
@@ -119,7 +148,11 @@ const Footer = () => {
           </Grid>
         </Grid>
 
-        <Box sx={{ textAlign: "center", mt: 4, borderTop: "1px solid #444", pt: 2 }}>
+        <Box sx={{ textAlign: "center", mt: 4, borderTop: "1px solid #444", pt: 2, fontFamily: "FiraSans", fontWeight: "bold",  fontSize: {
+          xs: "1.1rem", 
+          sm: "1.1rem",  
+          md: "1.3rem",    
+          lg: "1.4rem",  },  }}>
           &copy; 2025 Your E-commerce. All Rights Reserved.
         </Box>
       </Container>

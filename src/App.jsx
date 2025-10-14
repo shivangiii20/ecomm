@@ -16,6 +16,7 @@ import Signup from "./pages/Signup";
 
 
 
+
 function App() {
   
 
@@ -33,6 +34,7 @@ function App() {
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/terms" element={<Terms />} />
+        
       </Routes>
       <Footer/>
     </>

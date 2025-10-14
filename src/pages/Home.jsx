@@ -43,10 +43,18 @@ function Home() {
             py: { xs: 3, md: 5 },
           }}
         >
-          <Typography variant="h3" fontWeight={800} gutterBottom>
+          <Typography variant="h3" fontWeight={800} gutterBottom sx={{fontFamily: "FiraSans", fontSize: {
+          xs: "3.1rem",  // extra small screens
+          sm: "3.2rem",  // small screens
+          md: "3.5rem",    // medium screens
+          lg: "3.7rem",  }, }}>
             Big Sale 50% off
           </Typography>
-          <Typography variant="body1" sx={{ opacity: 0.9, mb: 2 }}>
+          <Typography variant="body1" sx={{ opacity: 0.9, mb: 2, fontFamily: "FiraSansSemiBold", fontSize: {
+          xs: "1.1rem", 
+          sm: "1.2rem",  
+          md: "1.5rem",    
+          lg: "1.7rem",  },  }}>
             Limited-time deals on best-sellers.
           </Typography>
           <Button
@@ -54,6 +62,11 @@ function Home() {
             color="primary"
             size="large"
             onClick={() => window.location.assign("/products")}
+            sx={{fontFamily: "FiraSans", fontWeight: "bold", fontSize: {
+          xs: "1.1rem", 
+          sm: "1.1rem",  
+          md: "1.3rem",    
+          lg: "1.4rem",  }, }}
           >
             Shop Now
           </Button>
@@ -91,11 +104,17 @@ function Home() {
     sx={{
       mb: 3,
       textAlign: "center",
-      fontWeight: 800,
-      fontSize: { xs: "1.75rem", sm: "2rem", md: "2.25rem" },
-      background: "linear-gradient(90deg, #0b6bcb, #7bcfff)",
+      fontWeight: "bold",
+      background: "linear-gradient(90deg, #0b6bcb, #593ff0ff)",
       WebkitBackgroundClip: "text",
       WebkitTextFillColor: "transparent",
+      fontFamily: "FiraSans",
+      fontSize: {
+          xs: "3rem", 
+          sm: "3.1rem",  
+          md: "3.3rem",    
+          lg: "3.4rem",  },
+
     }}
   >
     Categories
@@ -130,13 +149,18 @@ function Home() {
         }}
       >
         <PhoneIphoneIcon sx={{ fontSize: { xs: 36, sm: 44, md: 56, lg: 64 }, color: "primary.main" }} />
-        <Typography>Electronics</Typography>
+        <Typography sx={{fontFamily: "FiraSans", fontWeight: "bold", fontSize: {
+          xs: "1.1rem", 
+          sm: "1.1rem",  
+          md: "1.3rem",    
+          lg: "1.4rem",  },
+  }}>Electronics</Typography>
       </Paper>
     </Grid>
 
     <Grid item xs={12} sm={6} md={3} lg={3}>
       <Paper
-        onClick={() => window.location.assign("/products?category=Women")}
+        onClick={() => window.location.assign("/products?category=Fashion")}
         role="button"
         tabIndex={0}
         onKeyDown={(e) => (e.key === "Enter" || e.key === " ") && window.location.assign("/products?category=Women")}
@@ -156,13 +180,18 @@ function Home() {
         }}
       >
         <CheckroomIcon sx={{ fontSize: { xs: 36, sm: 44, md: 56, lg: 64 }, color: "primary.main" }} />
-        <Typography>Fashion</Typography>
+        <Typography sx={{fontFamily: "FiraSans", fontWeight: "bold", fontSize: {
+          xs: "1.1rem", 
+          sm: "1.1rem",  
+          md: "1.3rem",    
+          lg: "1.4rem",  },
+  }}>Fashion</Typography>
       </Paper>
     </Grid>
 
     <Grid item xs={12} sm={6} md={3} lg={3}>
       <Paper
-        onClick={() => window.location.assign("/products?category=Home")}
+        onClick={() => window.location.assign("/products?category=Furniture")}
         role="button"
         tabIndex={0}
         onKeyDown={(e) => (e.key === "Enter" || e.key === " ") && window.location.assign("/products?category=Home")}
@@ -182,7 +211,12 @@ function Home() {
         }}
       >
         <WeekendIcon sx={{ fontSize: { xs: 36, sm: 44, md: 56, lg: 64 }, color: "primary.main" }} />
-        <Typography>Furniture</Typography>
+        <Typography sx={{fontFamily: "FiraSans", fontWeight: "bold", fontSize: {
+          xs: "1.1rem", 
+          sm: "1.1rem",  
+          md: "1.3rem",    
+          lg: "1.4rem",  },
+  }}>Furniture</Typography>
       </Paper>
     </Grid>
 
@@ -208,7 +242,12 @@ function Home() {
         }}
       >
         <MenuBookIcon sx={{ fontSize: { xs: 36, sm: 44, md: 56, lg: 64 }, color: "primary.main" }} />
-        <Typography>Books</Typography>
+        <Typography sx={{fontFamily: "FiraSans", fontWeight: "bold", fontSize: {
+          xs: "1.1rem", 
+          sm: "1.1rem",  
+          md: "1.3rem",    
+          lg: "1.4rem",  },
+  }}>Books</Typography>
       </Paper>
     </Grid>
   </Grid>

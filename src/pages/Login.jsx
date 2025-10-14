@@ -11,8 +11,6 @@ import {
 } from "@mui/material";
 import { Visibility, VisibilityOff } from "@mui/icons-material";
 import { Link as RouterLink } from "react-router-dom";
-import Lottie from "lottie-react";
-import login from "../assets/animation/login.json";
 
 function Login() {
   const [showPassword, setShowPassword] = useState(false);
@@ -44,17 +42,39 @@ function Login() {
       px={3}
       gap={4}
     >
-      {/* Animation */}
-      <Box flex={1} maxWidth={{ xs: "300px", md: "500px" }} mx="auto">
-        <Lottie animationData={login} loop={true} />
-      </Box>
-
       {/* Form */}
       <Box flex={1} maxWidth="400px" width="100%">
-        <Typography variant="h4" fontWeight="bold" mb={1}>
-          Welcome Back 👋
+        <Typography
+          variant="h4"
+          fontWeight="bold"
+          mb={1}
+          sx={{
+            fontFamily: "FiraSans",
+            fontWeight: "bold",
+            fontSize: {
+              xs: "3rem",
+              sm: "3rem",
+              md: "3.1rem",
+              lg: "3.1rem",
+            },
+          }}
+        >
+          Welcome Back👋
         </Typography>
-        <Typography variant="body1" color="text.secondary" mb={3}>
+        <Typography
+          variant="body1"
+          color="text.secondary"
+          mb={3}
+          sx={{
+            fontFamily: "FiraSansSemiBold",
+            fontSize: {
+              xs: "1.1rem",
+              sm: "1.2rem",
+              md: "1.3rem",
+              lg: "1.3rem",
+            },
+          }}
+        >
           Please login to your account to continue
         </Typography>
 
@@ -65,6 +85,27 @@ function Login() {
           margin="normal"
           value={emailOrPhone}
           onChange={handleEmailOrPhoneChange}
+          sx={{
+            "& .MuiInputLabel-root": {
+              fontFamily: "FiraSans",
+              fontWeight: "bold",
+              fontSize: {
+                xs: "1.1rem",
+                sm: "1.2rem",
+                md: "1.3rem",
+                lg: "1.1rem",
+              }, // label font
+            },
+            "& .MuiOutlinedInput-root": {
+              fontFamily: "FiraSansSemiBold",
+              fontSize: {
+                xs: "0.85rem",
+                sm: "0.90rem",
+                md: "1rem",
+                lg: "1.1rem",
+              }, // input text font
+            },
+          }}
         />
 
         <TextField
@@ -75,6 +116,27 @@ function Login() {
           type={showPassword ? "text" : "password"}
           value={password}
           onChange={(e) => setPassword(e.target.value)}
+          sx={{
+            "& .MuiInputLabel-root": {
+              fontFamily: "FiraSans",
+              fontWeight: "bold",
+              fontSize: {
+                xs: "1.1rem",
+                sm: "1.2rem",
+                md: "1.3rem",
+                lg: "1.1rem",
+              }, // label font
+            },
+            "& .MuiOutlinedInput-root": {
+              fontFamily: "FiraSansSemiBold",
+              fontSize: {
+                xs: "0.85rem",
+                sm: "0.90rem",
+                md: "1rem",
+                lg: "1rem",
+              }, // input text font
+            },
+          }}
           InputProps={{
             endAdornment: (
               <InputAdornment position="end">
@@ -86,13 +148,41 @@ function Login() {
           }}
         />
 
-        <Button variant="contained" color="primary" fullWidth sx={{ mt: 2 }}>
+        <Button
+          variant="contained"
+          color="primary"
+          fullWidth
+          sx={{
+            mt: 2,
+            fontFamily: "FiraSans",
+            fontWeight: "bold",
+            fontSize: {
+              xs: "1rem",
+              sm: "1.1rem",
+              md: "1.2rem",
+              lg: "1.2rem",
+            },
+          }}
+        >
           Login
         </Button>
 
         {/* Signup Link */}
-        <Typography variant="body2" align="center" sx={{ mt: 2 }}>
-          Don’t have an account?{" "}
+        <Typography
+          variant="body2"
+          align="center"
+          sx={{
+            mt: 2,
+            fontFamily: "FiraSansSemiBold",
+            fontSize: {
+              xs: "1rem",
+              sm: "1.1rem",
+              md: "1.2rem",
+              lg: "1.2rem",
+            },
+          }}
+        >
+          Don’t have an account ?{" "}
           <Link
             component={RouterLink}
             to="/signup"

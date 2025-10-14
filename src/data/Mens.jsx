@@ -1,53 +1,313 @@
 const Mens = {
   "0-100": [
-    { id: "men-1", name: "Basic T-Shirt", price: 60, rating: 3.5, brand: "H&M", availability: "In Stock", image: "/images/mens/tshirt.jpg" },
-    { id: "men-2", name: "Basic T-Shirt Solid Black", price: 60, rating: 4, brand: "H&M", availability: "In Stock", image: "/images/mens/btshirt.jpg" },
-    { id: "men-3", name: "Casual Socks Pack", price: 40, rating: 3.8, brand: "Nike", availability: "Out of Stock", image: "/images/mens/socks.jpg" },
+    {
+      id: "men-1",
+      name: "Basic T-Shirt",
+      price: 60,
+      rating: 3.5,
+      brand: "H&M",
+      availability: "In Stock",
+      description:
+        "A comfortable and lightweight cotton T-shirt, perfect for everyday wear.",
+      images: [
+        "/images/mens/tshirt.jpg",
+        "/images/mens/tshirt2.jpg",
+        "/images/mens/tshirt3.jpg",
+      ],
+    },
+    {
+      id: "men-2",
+      name: "Basic T-Shirt Solid Black",
+      price: 80,
+      rating: 4,
+      brand: "H&M",
+      availability: "In Stock",
+      description:
+        "Soft-touch black solid T-shirt that pairs perfectly with any jeans.",
+      images: [
+        "/images/mens/btshirt.jpg",
+        "/images/mens/btshirt2.jpg",
+      ],
+    },
   ],
 
   "101-200": [
-    { id: "men-4", name: "Casual Shirt", price: 150, rating: 4.0, brand: "Zara", availability: "In Stock", image: "/images/mens/shirt.jpg" },
-    { id: "men-5", name: "Chinos Pants", price: 180, rating: 4.2, brand: "Levis", availability: "In Stock", image: "/images/mens/chinos.jpg" },
+    {
+      id: "men-3",
+      name: "Casual Shirt",
+      price: 150,
+      rating: 4.2,
+      brand: "Zara",
+      availability: "In Stock",
+      description:
+        "Slim-fit casual shirt made from soft cotton fabric. Perfect for casual outings.",
+      images: [
+        "/images/mens/shirt.jpg",
+        "/images/mens/shirt2.jpg",
+      ],
+    },
+    {
+      id: "men-4",
+      name: "Printed Cotton Shirt",
+      price: 180,
+      rating: 4,
+      brand: "H&M",
+      availability: "In Stock",
+      description:
+        "Trendy printed shirt made with breathable cotton. Ideal for summer wear.",
+      images: [
+        "/images/mens/printshirt.jpg",
+        "/images/mens/printshirt2.jpg",
+      ],
+    },
   ],
 
   "201-300": [
-    { id: "men-6", name: "Denim Jeans", price: 250, rating: 4.3, brand: "Levis", availability: "In Stock", image: "/images/mens/jeans.jpg" },
-    { id: "men-7", name: "Formal Shirt", price: 285, rating: 4.1, brand: "Arrow", availability: "Out of Stock", image: "/images/mens/formalshirt.jpg" },
+    {
+      id: "men-5",
+      name: "Denim Jeans",
+      price: 250,
+      rating: 4.3,
+      brand: "Levis",
+      availability: "In Stock",
+      description:
+        "Classic blue denim jeans with durable stitching and a comfortable fit.",
+      images: [
+        "/images/mens/jeans.jpg",
+        "/images/mens/jeans2.jpg",
+      ],
+    },
+    {
+      id: "men-6",
+      name: "Slim Fit Jeans",
+      price: 280,
+      rating: 4.5,
+      brand: "Zara",
+      availability: "In Stock",
+      description:
+        "Stylish slim-fit jeans with soft stretch denim for superior comfort.",
+      images: [
+        "/images/mens/jeans3.jpg",
+        "/images/mens/jeans4.jpg",
+      ],
+    },
   ],
 
   "301-400": [
-    { id: "men-8", name: "Leather Belt", price: 320, rating: 4.4, brand: "Tommy Hilfiger", availability: "In Stock", image: "/images/mens/belt.jpg" },
-    { id: "men-9", name: "Hoodie Jacket", price: 375, rating: 4.2, brand: "Puma", availability: "In Stock", image: "/images/mens/hoodie.jpg" },
+    {
+      id: "men-7",
+      name: "Leather Belt",
+      price: 320,
+      rating: 4.4,
+      brand: "Tommy Hilfiger",
+      availability: "In Stock",
+      description:
+        "Premium genuine leather belt with metal buckle for a refined look.",
+      images: [
+        "/images/mens/belt.jpg",
+        "/images/mens/belt2.jpg",
+      ],
+    },
+    {
+      id: "men-8",
+      name: "Casual Sneakers",
+      price: 390,
+      rating: 4.3,
+      brand: "Adidas",
+      availability: "In Stock",
+      description:
+        "Lightweight casual sneakers perfect for daily use and comfort.",
+      images: [
+        "/images/mens/sneaker.jpg",
+        "/images/mens/sneaker2.jpg",
+      ],
+    },
   ],
 
   "401-500": [
-    { id: "men-10", name: "Leather Shoes", price: 420, rating: 4.5, brand: "Nike", availability: "In Stock", image: "/images/mens/shoes.jpg" },
-    { id: "men-11", name: "Sports Jacket", price: 480, rating: 4.6, brand: "Adidas", availability: "Out of Stock", image: "/images/mens/jacket.jpg" },
+    {
+      id: "men-9",
+      name: "Leather Shoes",
+      price: 450,
+      rating: 4.6,
+      brand: "Nike",
+      availability: "In Stock",
+      description:
+        "Elegant leather shoes ideal for formal or casual occasions.",
+      images: [
+        "/images/mens/shoes.jpg",
+        "/images/mens/shoes2.jpg",
+      ],
+    },
+    {
+      id: "men-10",
+      name: "Running Shoes",
+      price: 490,
+      rating: 4.7,
+      brand: "Adidas",
+      availability: "In Stock",
+      description:
+        "Durable and comfortable running shoes built for performance and style.",
+      images: [
+        "/images/mens/runningshoe.jpg",
+        "/images/mens/runningshoe2.jpg",
+      ],
+    },
   ],
 
   "501-600": [
-    { id: "men-12", name: "Smart Leather Shoes", price: 520, rating: 4.7, brand: "Hugo Boss", availability: "In Stock", image: "/images/mens/lshoes.jpg" },
-    { id: "men-13", name: "Premium Hoodie", price: 580, rating: 4.6, brand: "Nike", availability: "In Stock", image: "/images/mens/prehoodie.jpg" },
+    {
+      id: "men-11",
+      name: "Hoodie Sweatshirt",
+      price: 520,
+      rating: 4.5,
+      brand: "H&M",
+      availability: "In Stock",
+      description:
+        "Soft fleece hoodie with front pockets for everyday comfort.",
+      images: [
+        "/images/mens/hoodie.jpg",
+        "/images/mens/hoodie2.jpg",
+      ],
+    },
+    {
+      id: "men-12",
+      name: "Zipper Hoodie",
+      price: 590,
+      rating: 4.6,
+      brand: "Nike",
+      availability: "In Stock",
+      description:
+        "Full-zip hoodie made with premium fabric. Ideal for gym and travel.",
+      images: [
+        "/images/mens/ziphoodie.jpg",
+        "/images/mens/ziphoodie2.jpg",
+      ],
+    },
   ],
 
   "601-700": [
-    { id: "men-14", name: "Luxury Watch", price: 620, rating: 4.8, brand: "Fossil", availability: "In Stock", image: "/images/mens/watch.jpg" },
-    { id: "men-15", name: "Leather Jacket", price: 690, rating: 4.7, brand: "Zara", availability: "Out of Stock", image: "/images/mens/ljacket.jpg" },
+    {
+      id: "men-13",
+      name: "Casual Blazer",
+      price: 650,
+      rating: 4.5,
+      brand: "Zara",
+      availability: "In Stock",
+      description:
+        "Tailored-fit casual blazer made with fine wool blend fabric.",
+      images: [
+        "/images/mens/blazer.jpg",
+        "/images/mens/blazer2.jpg",
+      ],
+    },
+    {
+      id: "men-14",
+      name: "Formal Blazer",
+      price: 690,
+      rating: 4.7,
+      brand: "Raymond",
+      availability: "In Stock",
+      description:
+        "Classic formal blazer ideal for office meetings and events.",
+      images: [
+        "/images/mens/formalblazer.jpg",
+        "/images/mens/formalblazer2.jpg",
+      ],
+    },
   ],
 
   "701-800": [
-    { id: "men-16", name: "Formal Suit", price: 740, rating: 4.8, brand: "Arrow", availability: "In Stock", image: "/images/mens/suit.jpg" },
-    { id: "men-17", name: "Premium Sneakers", price: 780, rating: 4.7, brand: "Adidas", availability: "In Stock", image: "/images/mens/sneakers.jpg" },
+    {
+      id: "men-15",
+      name: "Leather Jacket",
+      price: 750,
+      rating: 4.8,
+      brand: "Levis",
+      availability: "In Stock",
+      description:
+        "Stylish leather jacket that gives a rugged and bold look.",
+      images: [
+        "/images/mens/jacket.jpg",
+        "/images/mens/jacket2.jpg",
+      ],
+    },
+    {
+      id: "men-16",
+      name: "Winter Bomber Jacket",
+      price: 790,
+      rating: 4.7,
+      brand: "Tommy Hilfiger",
+      availability: "In Stock",
+      description:
+        "Warm and lightweight bomber jacket, perfect for cold weather.",
+      images: [
+        "/images/mens/bomber.jpg",
+        "/images/mens/bomber2.jpg",
+      ],
+    },
   ],
 
   "801-900": [
-    { id: "men-18", name: "Luxury Loafers", price: 850, rating: 4.9, brand: "Hugo Boss", availability: "In Stock", image: "/images/mens/loafers.jpg" },
-    { id: "men-19", name: "Designer Suit", price: 890, rating: 4.8, brand: "Armani", availability: "Out of Stock", image: "/images/mens/dsuit.jpg" },
+    {
+      id: "men-17",
+      name: "Wool Overcoat",
+      price: 850,
+      rating: 4.9,
+      brand: "Zara",
+      availability: "In Stock",
+      description:
+        "Luxury wool overcoat for a premium and stylish winter look.",
+      images: [
+        "/images/mens/overcoat.jpg",
+        "/images/mens/overcoat2.jpg",
+      ],
+    },
+    {
+      id: "men-18",
+      name: "Trench Coat",
+      price: 880,
+      rating: 4.8,
+      brand: "Burberry",
+      availability: "In Stock",
+      description:
+        "Classic beige trench coat with waterproof design and timeless appeal.",
+      images: [
+        "/images/mens/trench.jpg",
+        "/images/mens/trench2.jpg",
+      ],
+    },
   ],
 
   "901-1000": [
-    { id: "men-20", name: "Premium Leather Shoes", price: 950, rating: 5.0, brand: "Gucci", availability: "In Stock", image: "/images/mens/gshoes.jpg" },
-    { id: "men-21", name: "Luxury Watch Limited", price: 999, rating: 4.9, brand: "Rolex", availability: "In Stock", image: "/images/mens/rwatch.jpg" },
+    {
+      id: "men-19",
+      name: "Luxury Suit Set",
+      price: 950,
+      rating: 5,
+      brand: "Raymond",
+      availability: "In Stock",
+      description:
+        "Tailored premium suit for weddings, business, or any formal occasion.",
+      images: [
+        "/images/mens/suit.jpg",
+        "/images/mens/suit2.jpg",
+      ],
+    },
+    {
+      id: "men-20",
+      name: "Designer Sherwani",
+      price: 990,
+      rating: 4.9,
+      brand: "Manyavar",
+      availability: "In Stock",
+      description:
+        "Royal designer sherwani with intricate embroidery for festive occasions.",
+      images: [
+        "/images/mens/sherwani.jpg",
+        "/images/mens/sherwani2.jpg",
+      ],
+    },
   ],
 };
 
