@@ -33,6 +33,7 @@ function Login() {
   };
 
   return (
+    <>
     <Box
       display="flex"
       flexDirection={{ xs: "column", md: "row" }}
@@ -194,7 +195,35 @@ function Login() {
           </Link>
         </Typography>
       </Box>
-    </Box>
+      </Box>
+      
+      {/* Login as Admin Link */}
+<Typography
+  variant="body2"
+  align="center"
+  sx={{
+    mt: 2,
+    fontFamily: "FiraSansSemiBold",
+    fontSize: {
+      xs: "1rem",
+      sm: "1.1rem",
+      md: "1.2rem",
+      lg: "1.2rem",
+    },
+  }}
+>
+  Are you an admin?{" "}
+  <Link
+    component={RouterLink}
+    to="/admin-login"
+    underline="hover"
+    color="primary"
+    sx={{ fontWeight: 500 }}
+  >
+    Login as Admin
+  </Link>
+</Typography>
+</>
   );
 }
 
