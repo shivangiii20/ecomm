@@ -133,12 +133,7 @@ function AdminManageProducts() {
         </TableContainer>
       </Box>
 
-      {/* Footer (keeps same look as other admin pages) */}
-      <Box component="footer" mt={4} py={2} textAlign="center" borderTop="1px solid #e0e0e0">
-        <Typography sx={{ fontFamily: "FiraSansSemiBold", color: "text.secondary" }}>
-          © {new Date().getFullYear()} YourStore Admin
-        </Typography>
-      </Box>
+    
     </Box>
   );
 }

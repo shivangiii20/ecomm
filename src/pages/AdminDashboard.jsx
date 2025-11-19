@@ -31,8 +31,13 @@ const recentOrders = [
 
 function AdminDashboard() {
   return (
-    <Box sx={{ p: 3, fontFamily: "FiraSansSemiBold" }}>
-      
+    <Box
+      sx={{
+        p: 3,
+        pl: { xs: 3, sm: 3, md: 3, lg: 6, xl: 10 },
+        fontFamily: "FiraSansSemiBold",
+      }}
+    >
       {/* Title */}
       <Typography
         variant="h5"
@@ -40,86 +45,83 @@ function AdminDashboard() {
         mb={3}
         sx={{
           fontFamily: "FiraSansSemiBold",
-          fontSize: { xs: "2rem", sm: "2.1rem", md: "2.3rem", lg: "2.4rem" }
+          fontSize: { xs: "2rem", sm: "2.1rem", md: "2.3rem", lg: "2.4rem" },
         }}
       >
         Admin Dashboard
       </Typography>
 
-      {/* Top Cards */}
-      <Grid container spacing={2}>
-        <Grid item xs={12} sm={6} md={4}>
-          <Paper elevation={2} sx={cardStyle}>
-            <Typography
-              variant="subtitle1"
-              sx={{
-                fontFamily: "FiraSansSemiBold",
-                fontSize: { xs: "1.1rem", sm: "1.1rem", md: "1.3rem", lg: "1.4rem" }
-              }}
-            >
-              Total Products
-            </Typography>
-            <Typography variant="h4" fontWeight="bold">
-              {dashboardData.totalProducts}
-            </Typography>
-          </Paper>
+      {/* ⭐ CENTERED TOP CARDS ⭐ */}
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          width: "100%",
+        }}
+      >
+        <Grid
+          container
+          spacing={3}
+          sx={{
+            maxWidth: "1100px",
+            justifyContent: "center",
+          }}
+        >
+          {/* Card 1 */}
+          <Grid item xs={12} sm={6} md={4}>
+            <Paper elevation={2} sx={cardStyle}>
+              <Typography variant="subtitle1" sx={titleStyle}>
+                Total Products
+              </Typography>
+              <Typography variant="h4" fontWeight="bold">
+                {dashboardData.totalProducts}
+              </Typography>
+            </Paper>
+          </Grid>
+
+          {/* Card 2 */}
+          <Grid item xs={12} sm={6} md={4}>
+            <Paper elevation={2} sx={cardStyle}>
+              <Typography variant="subtitle1" sx={titleStyle}>
+                Total Orders
+              </Typography>
+
+              <Typography variant="h4" fontWeight="bold">
+                {dashboardData.totalOrders}
+              </Typography>
+
+              {/* Vertical Status */}
+              <Box sx={{ mt: 2 }}>
+                <Typography sx={statusText}>Pending: {dashboardData.pending}</Typography>
+                <Typography sx={statusText}>Delivered: {dashboardData.delivered}</Typography>
+                <Typography sx={statusText}>Cancelled: {dashboardData.cancelled}</Typography>
+              </Box>
+            </Paper>
+          </Grid>
+
+          {/* Card 3 */}
+          <Grid item xs={12} sm={6} md={4}>
+            <Paper elevation={2} sx={cardStyle}>
+              <Typography variant="subtitle1" sx={titleStyle}>
+                Revenue
+              </Typography>
+              <Typography variant="h4" fontWeight="bold">
+                {dashboardData.revenue}
+              </Typography>
+            </Paper>
+          </Grid>
         </Grid>
+      </Box>
 
-        <Grid item xs={12} sm={6} md={4}>
-          <Paper elevation={2} sx={cardStyle}>
-            <Typography
-              variant="subtitle1"
-              sx={{
-                fontFamily: "FiraSansSemiBold",
-                fontSize: { xs: "1.1rem", sm: "1.1rem", md: "1.3rem", lg: "1.4rem" }
-              }}
-            >
-              Total Orders
-            </Typography>
-            <Typography variant="h4" fontWeight="bold">
-              {dashboardData.totalOrders}
-            </Typography>
-
-            <Typography
-              sx={{
-                mt: 1,
-                fontFamily: "FiraSans",
-                fontWeight: "bold",
-                fontSize: { xs: "1.1rem", sm: "1.1rem", md: "1.1rem", lg: "1.2rem" }
-              }}
-            >
-              Pending {dashboardData.pending} | Delivered {dashboardData.delivered} | Cancelled {dashboardData.cancelled}
-            </Typography>
-          </Paper>
-        </Grid>
-
-        <Grid item xs={12} sm={6} md={4}>
-          <Paper elevation={2} sx={cardStyle}>
-            <Typography
-              variant="subtitle1"
-              sx={{
-                fontFamily: "FiraSansSemiBold",
-                fontSize: { xs: "1.1rem", sm: "1.1rem", md: "1.3rem", lg: "1.4rem" }
-              }}
-            >
-              Revenue
-            </Typography>
-            <Typography variant="h4" fontWeight="bold">
-              {dashboardData.revenue}
-            </Typography>
-          </Paper>
-        </Grid>
-      </Grid>
-
-      {/* Recent Orders */}
-      <Box mt={4}>
+      {/* ⭐ RECENT ORDERS SECTION (NOT CENTERED) ⭐ */}
+      <Box mt={4} sx={{ maxWidth: "1300px", mx: "auto" }}>
         <Typography
           variant="h6"
           fontWeight="bold"
           mb={2}
           sx={{
             fontFamily: "FiraSansSemiBold",
-            fontSize: { xs: "1.4rem", sm: "1.5rem", md: "1.6rem", lg: "1.7rem" }
+            fontSize: { xs: "1.4rem", sm: "1.5rem", md: "1.6rem", lg: "1.7rem" },
           }}
         >
           Recent Orders
@@ -128,15 +130,12 @@ function AdminDashboard() {
         <TableContainer component={Paper} sx={{ borderRadius: 3 }}>
           <Table
             sx={{
-              "& th": {
-                fontFamily: "FiraSansSemiBold",
-                fontSize: { xs: "1.1rem", sm: "1.1rem", md: "1.3rem", lg: "1.4rem" }
-              },
+              "& th": titleStyle,
               "& td": {
                 fontFamily: "FiraSans",
                 fontWeight: "bold",
-                fontSize: { xs: "1.1rem", sm: "1.1rem", md: "1.3rem", lg: "1.2rem" }
-              }
+                fontSize: { xs: "1.1rem", sm: "1.1rem", md: "1.3rem", lg: "1.2rem" },
+              },
             }}
           >
             <TableHead>
@@ -175,30 +174,34 @@ function AdminDashboard() {
         </TableContainer>
       </Box>
 
-      {/* Footer */}
-      <Typography
-        textAlign="center"
-        mt={4}
-        py={2}
-        sx={{
-          fontFamily: "FiraSansSemiBold",
-          fontWeight: "bold",
-          borderTop: "1px solid #e0e0e0",
-          fontSize: { xs: "1.1rem", sm: "1.1rem", md: "1.3rem", lg: "1.3rem" }
-        }}
-      >
-        © {new Date().getFullYear()} E-Comm Admin Panel. All Rights Reserved.
-      </Typography>
+     
     </Box>
   );
 }
 
+/* CARD STYLES */
 const cardStyle = {
   p: 3,
   borderRadius: 3,
   textAlign: "center",
   fontFamily: "FiraSansSemiBold",
   backgroundColor: "#fff",
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "center",
+  minHeight: "200px", // SAME HEIGHT
+};
+
+const titleStyle = {
+  fontFamily: "FiraSansSemiBold",
+  fontSize: { xs: "1.1rem", sm: "1.1rem", md: "1.3rem", lg: "1.4rem" },
+};
+
+const statusText = {
+  fontFamily: "FiraSans",
+  fontWeight: "bold",
+  fontSize: { xs: "1.1rem", sm: "1.1rem", md: "1.1rem", lg: "1.2rem" },
+  lineHeight: 1.6,
 };
 
 export default AdminDashboard;

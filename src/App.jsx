@@ -16,6 +16,7 @@ import AdminManageProducts from "./pages/AdminManageProducts";
 import AdminManageUsers from "./pages/AdminManageUsers";
 import AdminManageOrders from "./pages/AdminManageOrders";
 import AdminSettings from "./pages/AdminSettings";
+import Checkout from "./pages/Checkout";
 
 import About from "./pages/About";
 import Contact from "./pages/Contact";
@@ -38,9 +39,11 @@ function App() {
         <Route path="/cart" element={<Cart />} />
         <Route path="/login" element={<Login />} />
         <Route path="/admin-login" element={<AdminLogin />} />
+         <Route path="/checkout" element={<Checkout />} />
 
         {/* ADMIN ROUTES WITH SIDEBAR LAYOUT */}
         <Route path="/admin" element={<AdminLayout />}>
+        
           <Route path="dashboard" element={<AdminDashboard />} />
           <Route path="manage-products" element={<AdminManageProducts />} />
           <Route path="manage-users" element={<AdminManageUsers />} />

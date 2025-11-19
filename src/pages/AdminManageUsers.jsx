@@ -119,15 +119,7 @@ function AdminManageUsers() {
         </Table>
       </Card>
 
-      {/* Footer */}
-      <Typography
-        textAlign="center"
-        mt={4}
-        color="gray"
-        fontSize="14px"
-      >
-        © 2025 YourStore Admin
-      </Typography>
+      
     </Box>
   );
 }
