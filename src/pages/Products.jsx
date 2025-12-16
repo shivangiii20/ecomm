@@ -207,22 +207,20 @@ const Products = () => {
                 <Checkbox
                   checked={selectedCategory === cat}
                   onChange={() => handleCategoryChange(cat)}
-                  
                 />
               }
               label={cat}
               sx={{
-'& .MuiFormControlLabel-label': {
-fontFamily: 'FiraSans',
-fontSize: {
-xs: '1rem',
-sm: '1.1rem',
-md: '1.2rem',
-},
-fontWeight: 'bold',
-},
-}}
-              
+                "& .MuiFormControlLabel-label": {
+                  fontFamily: "FiraSans",
+                  fontSize: {
+                    xs: "1rem",
+                    sm: "1.1rem",
+                    md: "1.2rem",
+                  },
+                  fontWeight: "bold",
+                },
+              }}
             />
           ))}
         </FormGroup>
@@ -257,16 +255,16 @@ fontWeight: 'bold',
                   }
                   label={subCat}
                   sx={{
-'& .MuiFormControlLabel-label': {
-fontFamily: 'FiraSans',
-fontSize: {
-xs: '0.95rem',
-sm: '1rem',
-md: '1.05rem',
-},
-fontWeight: "bold",
-},
-}}
+                    "& .MuiFormControlLabel-label": {
+                      fontFamily: "FiraSans",
+                      fontSize: {
+                        xs: "0.95rem",
+                        sm: "1rem",
+                        md: "1.05rem",
+                      },
+                      fontWeight: "bold",
+                    },
+                  }}
                 />
               ))}
             </FormGroup>
@@ -327,16 +325,16 @@ fontWeight: "bold",
               }
               label={brand}
               sx={{
-'& .MuiFormControlLabel-label': {
-fontFamily: 'FiraSans',
-fontSize: {
-xs: '0.95rem',
-sm: '1rem',
-md: '1.05rem',
-},
-fontWeight: "bold",
-},
-}}
+                "& .MuiFormControlLabel-label": {
+                  fontFamily: "FiraSans",
+                  fontSize: {
+                    xs: "0.95rem",
+                    sm: "1rem",
+                    md: "1.05rem",
+                  },
+                  fontWeight: "bold",
+                },
+              }}
             />
           ))}
         </FormGroup>
@@ -393,16 +391,16 @@ fontWeight: "bold",
               }
               label={status}
               sx={{
-'& .MuiFormControlLabel-label': {
-fontFamily: 'FiraSans',
-fontSize: {
-xs: '0.95rem',
-sm: '1rem',
-md: '1.05rem',
-},
-fontWeight: "bold",
-},
-}}
+                "& .MuiFormControlLabel-label": {
+                  fontFamily: "FiraSans",
+                  fontSize: {
+                    xs: "0.95rem",
+                    sm: "1rem",
+                    md: "1.05rem",
+                  },
+                  fontWeight: "bold",
+                },
+              }}
             />
           ))}
         </FormGroup>
@@ -432,13 +430,20 @@ fontWeight: "bold",
 
       {/* Product Grid */}
       <Box sx={{ flex: 1, p: 3 }}>
-        <Typography variant="h4" fontWeight="bold" mb={3} sx={{fontFamily: "FiraSans",
+        <Typography
+          variant="h4"
+          fontWeight="bold"
+          mb={3}
+          sx={{
+            fontFamily: "FiraSans",
             fontSize: {
               xs: "2.7rem",
               sm: "2.9rem",
               md: "3.2rem",
               lg: "3.2rem",
-            },}}>
+            },
+          }}
+        >
           Products
         </Typography>
 
@@ -461,39 +466,51 @@ fontWeight: "bold",
                     height={200}
                   />
                   <CardContent>
-                    <Typography fontWeight="bold" sx={{
-fontFamily: "FiraSans",
-fontSize: {
-xs: "1.1rem",
-sm: "1.2rem",
-md: "1.3rem",
-lg: "1.4rem",
-},
-color: "#222",
-}}>{product.name}</Typography>
-                    <Typography  sx={{
-fontFamily: "FiraSansSemiBold",
-fontSize: {
-xs: "0.9rem",
-sm: "1rem",
-md: "1.05rem",
-lg: "1.1rem",
-},
-color: "#555",
-}}>
+                    <Typography
+                      fontWeight="bold"
+                      sx={{
+                        fontFamily: "FiraSans",
+                        fontSize: {
+                          xs: "1.1rem",
+                          sm: "1.2rem",
+                          md: "1.3rem",
+                          lg: "1.4rem",
+                        },
+                        color: "#222",
+                      }}
+                    >
+                      {product.name}
+                    </Typography>
+                    <Typography
+                      sx={{
+                        fontFamily: "FiraSansSemiBold",
+                        fontSize: {
+                          xs: "0.9rem",
+                          sm: "1rem",
+                          md: "1.05rem",
+                          lg: "1.1rem",
+                        },
+                        color: "#555",
+                      }}
+                    >
                       {product.brand} • {product.availability}
                     </Typography>
                     <Rating value={product.rating} readOnly size="small" />
-                    <Typography fontWeight="bold" sx={{
-fontFamily: "FiraSansSemiBold",
-fontSize: {
-xs: "1rem",
-sm: "1.1rem",
-md: "1.2rem",
-lg: "1.2rem",
-},
-color: "#000",
-}} >${product.price}</Typography>
+                    <Typography
+                      fontWeight="bold"
+                      sx={{
+                        fontFamily: "FiraSansSemiBold",
+                        fontSize: {
+                          xs: "1rem",
+                          sm: "1.1rem",
+                          md: "1.2rem",
+                          lg: "1.2rem",
+                        },
+                        color: "#000",
+                      }}
+                    >
+                      ${product.price}
+                    </Typography>
                     <Button
                       variant="contained"
                       color="primary"
@@ -559,15 +576,20 @@ color: "#000",
 
           {selectedProduct && (
             <Box>
-              <Typography variant="h5" fontWeight="bold" mb={2} sx={{
-fontFamily: 'FiraSans',
-fontSize: {
-xs: '1.4rem',
-sm: '1.6rem',
-md: '1.8rem',
-lg: '2rem',
-},
-}}>
+              <Typography
+                variant="h5"
+                fontWeight="bold"
+                mb={2}
+                sx={{
+                  fontFamily: "FiraSans",
+                  fontSize: {
+                    xs: "1.4rem",
+                    sm: "1.6rem",
+                    md: "1.8rem",
+                    lg: "2rem",
+                  },
+                }}
+              >
                 {selectedProduct.name}
               </Typography>
 
@@ -643,55 +665,136 @@ lg: '2rem',
                 />
               )}
 
-              <Typography mt={2} sx={{
-fontFamily: 'FiraSanssemiBold',
-fontSize: {
-xs: '1rem',
-sm: '1.1rem',
-md: '1.2rem',
-lg: '1.3rem',
-},
-color: '#555',
-}}>{selectedProduct.description}</Typography>
+              <Typography
+                mt={2}
+                sx={{
+                  fontFamily: "FiraSanssemiBold",
+                  fontSize: {
+                    xs: "1rem",
+                    sm: "1.1rem",
+                    md: "1.2rem",
+                    lg: "1.3rem",
+                  },
+                  color: "#555",
+                }}
+              >
+                {selectedProduct.description}
+              </Typography>
 
               {/* Size Chart toggle */}
-          {getGender(selectedProduct) && (
-<Button
-variant="outlined"
-sx={{ my: 2, fontFamily: 'FiraSans', fontSize: { xs: '0.9rem', sm: '1rem', md: '1.1rem' } }}
-onClick={() => setShowSizeChart(prev => !prev)}
->
-{showSizeChart ? 'Hide Size Chart' : 'Show Size Chart'}
-</Button>
-)}
+              {getGender(selectedProduct) && (
+                <Button
+                  variant="outlined"
+                  sx={{
+                    my: 2,
+                    fontFamily: "FiraSans",
+                    fontSize: { xs: "0.9rem", sm: "1rem", md: "1.1rem" },
+                  }}
+                  onClick={() => setShowSizeChart((prev) => !prev)}
+                >
+                  {showSizeChart ? "Hide Size Chart" : "Show Size Chart"}
+                </Button>
+              )}
 
-
-<Collapse in={showSizeChart}>
-{getGender(selectedProduct) && ["Inches", "CM"].map(unit => (
-<Box key={unit} sx={{ mb: 2, overflowX: 'auto' }}>
-<Typography fontWeight="bold" sx={{ fontFamily: 'FiraSans', fontSize: { xs: '1rem', sm: '1.1rem', md: '1.2rem' } }}>{unit}</Typography>
-<Box component="table" sx={{ borderCollapse: 'collapse', width: '100%', fontFamily: 'FiraSans', fontSize: { xs: '0.85rem', sm: '0.9rem', md: '1rem' } }}>
-<Box component="thead">
-<Box component="tr">
-{['Size', 'Bust', 'Waist', 'Length'].map((heading) => (
-<Box component="th" key={heading} sx={{ border: '1px solid #ddd', p: 1, textAlign: 'center' }}>{heading}</Box>
-))}
-</Box>
-</Box>
-<Box component="tbody">
-{SizeChart[getGender(selectedProduct)][unit].map(row => (
-<Box component="tr" key={row.size} sx={{ '&:nth-of-type(even)': { bgcolor: '#f5f5f5' } }}>
-<Box component="td" sx={{ border: '1px solid #ddd', p: 1, textAlign: 'center' }}>{row.size}</Box>
-<Box component="td" sx={{ border: '1px solid #ddd', p: 1, textAlign: 'center' }}>{row.bust}</Box>
-<Box component="td" sx={{ border: '1px solid #ddd', p: 1, textAlign: 'center' }}>{row.waist}</Box>
-<Box component="td" sx={{ border: '1px solid #ddd', p: 1, textAlign: 'center' }}>{row.length}</Box>
-</Box>
-))}
-</Box>
-</Box>
-</Box>
-))}
-</Collapse>
+              <Collapse in={showSizeChart}>
+                {getGender(selectedProduct) &&
+                  ["Inches", "CM"].map((unit) => (
+                    <Box key={unit} sx={{ mb: 2, overflowX: "auto" }}>
+                      <Typography
+                        fontWeight="bold"
+                        sx={{
+                          fontFamily: "FiraSans",
+                          fontSize: { xs: "1rem", sm: "1.1rem", md: "1.2rem" },
+                        }}
+                      >
+                        {unit}
+                      </Typography>
+                      <Box
+                        component="table"
+                        sx={{
+                          borderCollapse: "collapse",
+                          width: "100%",
+                          fontFamily: "FiraSans",
+                          fontSize: { xs: "0.85rem", sm: "0.9rem", md: "1rem" },
+                        }}
+                      >
+                        <Box component="thead">
+                          <Box component="tr">
+                            {["Size", "Bust", "Waist", "Length"].map(
+                              (heading) => (
+                                <Box
+                                  component="th"
+                                  key={heading}
+                                  sx={{
+                                    border: "1px solid #ddd",
+                                    p: 1,
+                                    textAlign: "center",
+                                  }}
+                                >
+                                  {heading}
+                                </Box>
+                              )
+                            )}
+                          </Box>
+                        </Box>
+                        <Box component="tbody">
+                          {SizeChart[getGender(selectedProduct)][unit].map(
+                            (row) => (
+                              <Box
+                                component="tr"
+                                key={row.size}
+                                sx={{
+                                  "&:nth-of-type(even)": { bgcolor: "#f5f5f5" },
+                                }}
+                              >
+                                <Box
+                                  component="td"
+                                  sx={{
+                                    border: "1px solid #ddd",
+                                    p: 1,
+                                    textAlign: "center",
+                                  }}
+                                >
+                                  {row.size}
+                                </Box>
+                                <Box
+                                  component="td"
+                                  sx={{
+                                    border: "1px solid #ddd",
+                                    p: 1,
+                                    textAlign: "center",
+                                  }}
+                                >
+                                  {row.bust}
+                                </Box>
+                                <Box
+                                  component="td"
+                                  sx={{
+                                    border: "1px solid #ddd",
+                                    p: 1,
+                                    textAlign: "center",
+                                  }}
+                                >
+                                  {row.waist}
+                                </Box>
+                                <Box
+                                  component="td"
+                                  sx={{
+                                    border: "1px solid #ddd",
+                                    p: 1,
+                                    textAlign: "center",
+                                  }}
+                                >
+                                  {row.length}
+                                </Box>
+                              </Box>
+                            )
+                          )}
+                        </Box>
+                      </Box>
+                    </Box>
+                  ))}
+              </Collapse>
 
               <Button
                 variant="contained"
